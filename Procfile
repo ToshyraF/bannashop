@@ -1,1 +1,1 @@
-web:python3 manage.py runserver -w 1
+web: python banna/manage.py runserver "0.0.0.0:$PORT" 
