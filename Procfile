@@ -1,1 +1,1 @@
-web: gunicorn banna.wsgi --log-file -
+web:gunicorn banna.wsgi --log-file -
