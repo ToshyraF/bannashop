@@ -1,0 +1,54 @@
+{% extends "./main.html" %}
+{% block content %}
+<body>
+<div class="container-fluid">
+    {% include "component/navbar.html"%}
+
+    <div class="row" style="display: block; margin-top: 20px">
+        <div class="col s12">
+            <div class="card card-nav-tabs">
+                <div class="card-header card-header-primary">
+                   <h4>ใบเตรียมของ</h4>
+                </div>
+                <div class="card-body container">
+                   <div class="row mb-2">
+                        <input type="text" class="datepicker">
+                   </div>
+                   <div class="row mb-2">
+                        <ul class="collapsible" style="width: 100%;">
+                            <li class="active">
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>ร้านมานี</div>
+                                <div class="collapsible-body"><span>น้ำยา2</span></div>
+                            </li>
+                        </ul>
+
+                        <ul class="collapsible" style="width: 100%;">
+                            <li class="active">
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col s6">6-columns (one-half)</div>
+        <div class="col s6">6-columns (one-half)</div> -->
+      </div>
+</div>
+{% include "component/script.html"%}
+</body>
+<style>
+    .modal{
+        height:auto;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('.collapsible').collapsible();
+        $('.datepicker').datepicker();
+    });
+</script>
+    {% block javascript %}
+    {% endblock %}
+{% endblock %}

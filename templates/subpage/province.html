@@ -1,0 +1,71 @@
+{% extends "../province.html" %}
+{% block subcontent %}
+<div class="card">
+    <div class="card-content">
+      <!-- <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p> -->
+        <div class="row mb-2">
+            <div class="col col-12">
+                <h6>จังหวัด</h6>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="input-field col-12">
+                <select class="form-control js-example-tags" style="width: 100%;">
+                    <option selected="selected">เชียงใหม่</option>
+                    <option>ชลยุรี</option>
+                    <option>กรุงเทพ</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <table class="striped">
+                <thead>
+                  <tr>
+                    <th>ร้านค้า</th>
+                    <th>ระดับ</th>
+                    <th>รอบซื้อล่าสุด</th>
+                    <th>ระยะเวลา</th>
+                    <th>เบอร์ติดต่อ</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr style="cursor: pointer;">
+                    <td>แอร์การช่าง</td>
+                    <td>1</td>
+                    <td>25/01/63</td>
+                    <td>1M</td>
+                    <td>089-123-4456</td>
+                  </tr>
+                  <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>$3.76</td>
+                  </tr>
+                  <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>$7.00</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <style>
+        .select2-container .select2-selection--single {
+            height: 34px;
+        }
+    </style>
+    <script>
+        $('table>tbody>tr').click(function(){
+            window.location.href = "/shop"
+        })
+        $('.collapsible').collapsible();
+        $(".js-example-tags").select2();
+    </script>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends "../province.html" %}
+{% block subcontent %}
+<ul class="collapsible">
+    <li>
+        <div class="collapsible-header">
+            <div class="row" style="width: 100%;margin-bottom: 0px;">
+                <div class="col col-8 col-sm-3 col-md-3 col-lg-3">
+                    <i class="material-icons">filter_drama</i>ภาคเหนือ 
+                </div>
+                <div class="col col-9 col-sm-9 col-md-9 col-lg-9" style="text-align: right;" >
+                    <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
+                        <i class="material-icons left" style="margin-right: 0px;">show_chart</i>
+                    </button>
+                    <!-- <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
+                        <i class="material-icons left" style="margin-right: 0px;">add</i>
+                    </button> -->
+                </div>
+            </div>
+        </div>
+        <div class="collapsible-body">
+            <div class="chip regionpage-province">
+                เชี่ยงใหม่
+            </div>
+        </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>ภาคกลาง</div>
+        <div class="collapsible-body">
+            <select class="js-example-basic-single select2" name="state">
+                <option value="AL">Alabama</option>
+                <option value="WY">Wyoming</option>
+            </select>
+        </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคตะวันออก</div>
+      <div class="collapsible-body">
+
+      </div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคตะวันตก</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคใต้</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+{% endblock %}
+{% block modal %}
+    {% include "component/graph.html"%}
+{% endblock %}
+{% block javascript %}
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data:  {
+                datasets: [{
+                    data: [10, 50, 30],
+                    backgroundColor: [ //set color of each data in pie chart UI, support opacity value
+                        'rgba(255, 99, 132, 1)', //color for female
+                        'rgba(54, 162, 235, 1)', //color for male
+                        'rgba(54, 162, 235, 1)' //color for male
+                    ]
+                }],
+
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                labels: [
+                    'Red',
+                    'Yellow',
+                    'Blue'
+                ]
+
+            },
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Custom Chart Title'
+                    },
+                    legend: {
+                        display: true //show legend at the top of a chart
+                        
+                    },
+                    tooltips: {
+                        enabled: true //not show tooltips when hover a chart
+                    },
+                }
+            });
+        $('.chips').chips()
+        $(document).ready(function(){
+            $('.modal').modal();
+            // $('select').formSelect();
+            $('.collapsible').collapsible();
+            $('.regionpage-province').click(function(){
+                window.location.href = "/province"
+            })
+        });
+    </script>
+{% endblock %}

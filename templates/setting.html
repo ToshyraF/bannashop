@@ -1,0 +1,103 @@
+{% extends "./main.html" %}
+{% block content %}
+<body>
+<div class="container-fluid">
+    {% include "component/navbar.html"%}
+
+    <div class="row" style="display: block; margin-top: 20px">
+        <div class="col s12">
+            <div class="card card-nav-tabs">
+                <div class="card-header card-header-primary">
+                   <h4>Setting</h4>
+                </div>
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col col-12">
+                            ภูมิภาค
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                                <select class="select-setting-region" name="state">
+                                    <option value="AL">Alabama</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-6">
+                            จังหวัด
+                        </div>
+                        <div class="col col-6 text-right">
+                            <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
+                                <i class="material-icons left" style="margin-left:2px;margin-right: 2px;">add</i>เพิ่มจังหวัด
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col-12">
+                            <select class="form-control js-example-tags">
+                                <option selected="selected">orange</option>
+                                <option>white</option>
+                                <option>purple</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-6">
+                            ร้านค้า
+                        </div>
+                        <div class="col col-6 text-right">
+                            <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
+                                <i class="material-icons left" style="margin-left:2px;margin-right: 2px;">add</i>เพิ่มร้านค้า
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                            <table>
+                                <thead>
+                                  <tr>
+                                      <th>Name</th>
+                                      <th>Item Name</th>
+                                      <th>Item Price</th>
+                                  </tr>
+                                </thead>
+                        
+                                <tbody>
+                                  <tr>
+                                    <td>Alvin</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Alan</td>
+                                    <td>Jellybean</td>
+                                    <td>$3.76</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Jonathan</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "component/script.html"%}
+</body>
+<style>
+   .select2-container .select2-selection--single {
+       height: 34px;
+   }
+</style>
+<script>
+    $(".js-example-tags").select2();
+    $(".select-setting-region").formSelect();
+</script>
+{% endblock %}

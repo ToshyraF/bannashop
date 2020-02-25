@@ -1,0 +1,51 @@
+{% extends "./main.html" %}
+{% block content %}
+<body>
+<div class="container-fluid">
+    {% include "component/navbar.html"%}
+
+    <div class="row" style="display: block; margin-top: 20px">
+        <div class="col s12">
+            <div class="card card-nav-tabs">
+                <div class="card-header card-header-primary">
+                   <h4>Banna</h4>
+                </div>
+                <div class="card-body ">
+                    {% include "component/subnavbar.html"%}
+                    <div class="row">
+                        <div class="col col-8 col-sm-8 col-md-8 col-lg-8">
+                            {% block subcontent %}
+                            {% endblock %}
+                        </div>
+                        <div class="col col-4 col-sm-4 col-md-4 col-lg-4">
+                            <ul class="collapsible">
+                                <li class="active">
+                                  <div class="collapsible-header"><i class="material-icons">filter_drama</i>แจ้งเตือน</div>
+                                  <div class="collapsible-body">
+                                    <div class="chip warning">
+                                        แอร์การช่าง 100000 บาท 10/11/23
+                                        <i class="close material-icons">close</i>
+                                      </div>
+                                      <div class="chip warning">
+                                        แอร์การช่าง 200000 บาท 15/11/23
+                                        <i class="close material-icons">close</i>
+                                      </div>
+                                  </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col s6">6-columns (one-half)</div>
+        <div class="col s6">6-columns (one-half)</div> -->
+      </div>
+</div>
+{% block modal %}
+{% endblock %}
+{% include "component/script.html"%}
+</body>
+    {% block javascript %}
+    {% endblock %}
+{% endblock %}
