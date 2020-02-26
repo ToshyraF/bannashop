@@ -4,16 +4,13 @@
     <li>
         <div class="collapsible-header">
             <div class="row" style="width: 100%;margin-bottom: 0px;">
-                <div class="col col-8 col-sm-3 col-md-3 col-lg-3">
+                <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
                     <i class="material-icons">filter_drama</i>ภาคเหนือ 
                 </div>
-                <div class="col col-9 col-sm-9 col-md-9 col-lg-9" style="text-align: right;" >
-                    <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
-                        <i class="material-icons left" style="margin-right: 0px;">show_chart</i>
+                <div class="col col-12 col-sm-12 col-md-9 col-lg-9" style="text-align: right;" >
+                    <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph"  data-target="modal1" type="submit" name="action">
+                         Graph
                     </button>
-                    <!-- <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
-                        <i class="material-icons left" style="margin-right: 0px;">add</i>
-                    </button> -->
                 </div>
             </div>
         </div>
@@ -24,7 +21,18 @@
         </div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>ภาคกลาง</div>
+      <div class="collapsible-header">
+        <div class="row" style="width: 100%;margin-bottom: 0px;">
+                <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
+                    <i class="material-icons">filter_drama</i>ภาคกลาง 
+                </div>
+                <div class="col col-12 col-sm-12 col-md-9 col-lg-9" style="text-align: right;" >
+                    <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph"  data-target="modal1" type="submit" name="action">
+                         Graph
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="collapsible-body">
             <select class="js-example-basic-single select2" name="state">
                 <option value="AL">Alabama</option>
@@ -33,17 +41,51 @@
         </div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคตะวันออก</div>
+      <div class="collapsible-header">
+        <div class="row" style="width: 100%;margin-bottom: 0px;">
+            <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
+                <i class="material-icons">filter_drama</i>ภาคตะวันออก 
+            </div>
+            <div class="col col-12 col-sm-12 col-md-9 col-lg-9" style="text-align: right;" >
+                <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph"  data-target="modal1" type="submit" name="action">
+                     Graph
+                </button>
+            </div>
+        </div>
+    </div>  
+        
       <div class="collapsible-body">
 
       </div>
     </li>
     <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคตะวันตก</div>
+        <div class="collapsible-header">
+            <div class="row" style="width: 100%;margin-bottom: 0px;">
+                <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
+                    <i class="material-icons">filter_drama</i>ภาคตะวันตก 
+                </div>
+                <div class="col col-12 col-sm-12 col-md-9 col-lg-9" style="text-align: right;" >
+                    <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph"  data-target="modal1" type="submit" name="action">
+                         Graph
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
     <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>ภาคใต้</div>
+        <div class="collapsible-header">
+            <div class="row" style="width: 100%;margin-bottom: 0px;">
+                <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
+                    <i class="material-icons">filter_drama</i>ภาคใต้ 
+                </div>
+                <div class="col col-12 col-sm-12 col-md-9 col-lg-9" style="text-align: right;" >
+                    <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph"  data-target="modal1" type="submit" name="action">
+                         Graph
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
     </li>
   </ul>
@@ -52,6 +94,21 @@
     {% include "component/graph.html"%}
 {% endblock %}
 {% block javascript %}
+<style>
+    @media screen and (max-width: 400px){
+        /* some css here */
+        .container-fluid{
+            padding-right:0px ;
+            padding-left:0px ;
+        }
+        .btn-graph{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top:20px;
+        }
+    }
+</style>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var myPieChart = new Chart(ctx, {
