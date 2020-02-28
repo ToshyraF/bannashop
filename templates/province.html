@@ -1,5 +1,35 @@
 {% extends "./main.html" %}
 {% block content %}
+<style>
+     @media screen and (min-width: 1000px){
+        .sub-menu-btn{
+            display: none;
+        }
+        .collapsible-body{
+            height: 330px;
+            overflow-y: scroll;
+        }
+    }
+    @media screen and (max-width: 400px){
+        /* some css here */
+        .container-fluid{
+            padding-right:0px ;
+            padding-left:0px ;
+        }
+        .btn-graph{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top:20px;
+        }
+        .sub-menu-btn{
+            display: block;
+        }
+        .collapsible-body{
+            height: auto;
+        }
+    }
+</style>
 <body>
 <div class="container-fluid">
     {% include "component/navbar.html"%}
@@ -7,21 +37,17 @@
     <div class="row" style="display: block; margin-top: 20px">
         <div class="col col-12 ">
             <div class="card card-nav-tabs">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-primary" style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
                    <h4>Banna</h4>
                 </div>
                 <div class="card-body ">
-                    {% include "component/subnavbar.html"%}
+                    
                     <div class="row">
-                        <div class="col col-12 col-sm-12 col-md-8 col-lg-8">
-                            {% block subcontent %}
-                            {% endblock %}
-                        </div>
                         <div class="col col-12 col-sm-12 col-md-4 col-lg-4">
                             <ul class="collapsible">
                                 <li class="active">
                                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>แจ้งเตือน</div>
-                                  <div class="collapsible-body">
+                                  <div class="collapsible-body" >
                                     <div class="chip warning" >
                                         <div class="row">
                                             <div class="col col-9">
@@ -45,6 +71,12 @@
                                   </div>
                                 </li>
                             </ul>
+                        </div>
+                        
+                        <div class="col col-12 col-sm-12 col-md-8 col-lg-8">
+                            {% include "component/subnavbar.html"%}
+                            {% block subcontent %}
+                            {% endblock %}
                         </div>
                     </div>
                 </div>

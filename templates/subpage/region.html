@@ -95,6 +95,12 @@
 {% endblock %}
 {% block javascript %}
 <style>
+    
+    @media screen and (min-width: 1000px){
+        .sub-menu-btn{
+            display: none;
+        }
+    }
     @media screen and (max-width: 400px){
         /* some css here */
         .container-fluid{
@@ -106,6 +112,9 @@
             width: 100%;
             text-align: center;
             margin-top:20px;
+        }
+        .sub-menu-btn{
+            display: block;
         }
     }
 </style>
