@@ -99,41 +99,64 @@
    
 </style>
     <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myPieChart = new Chart(ctx, {
-                type: 'pie',
-                data:  {
-                datasets: [{
-                    data: [10, 50, 30],
-                    backgroundColor: [ //set color of each data in pie chart UI, support opacity value
-                        'rgba(255, 99, 132, 1)', //color for female
-                        'rgba(54, 162, 235, 1)', //color for male
-                        'rgba(54, 162, 235, 1)' //color for male
-                    ]
-                }],
-
-                // These labels appear in the legend and in the tooltips when hovering different arcs
-                labels: [
-                    'Red',
-                    'Yellow',
-                    'Blue'
-                ]
-
-            },
-                options: {
-                    title: {
-                        display: true,
-                        text: 'Custom Chart Title'
-                    },
-                    legend: {
-                        display: false //show legend at the top of a chart
-                        
-                    },
-                    tooltips: {
-                        enabled: true //not show tooltips when hover a chart
-                    },
-                }
-            });
+        var ctx = document.getElementById('myChart')
+        Highcharts.chart(ctx, {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Header chart'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        exporting: {
+    enabled: false
+  },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Chrome',
+                y: 61.41,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Internet Explorer',
+                y: 11.84
+            }, {
+                name: 'Firefox',
+                y: 10.85
+            }, {
+                name: 'Edge',
+                y: 4.67
+            }, {
+                name: 'Safari',
+                y: 4.18
+            }, {
+                name: 'Other',
+                y: 7.05
+            }]
+        }]
+});
         $('.chips').chips()
         $(document).ready(function(){
             $('.modal').modal();
