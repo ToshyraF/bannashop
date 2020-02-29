@@ -96,27 +96,7 @@
 {% block javascript %}
 <style>
     
-    @media screen and (min-width: 1000px){
-        .sub-menu-btn{
-            display: none;
-        }
-    }
-    @media screen and (max-width: 400px){
-        /* some css here */
-        .container-fluid{
-            padding-right:0px ;
-            padding-left:0px ;
-        }
-        .btn-graph{
-            display: block;
-            width: 100%;
-            text-align: center;
-            margin-top:20px;
-        }
-        .sub-menu-btn{
-            display: block;
-        }
-    }
+   
 </style>
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
@@ -146,7 +126,7 @@
                         text: 'Custom Chart Title'
                     },
                     legend: {
-                        display: true //show legend at the top of a chart
+                        display: false //show legend at the top of a chart
                         
                     },
                     tooltips: {
