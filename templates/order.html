@@ -1,4 +1,5 @@
 {% extends "./main.html" %}
+{% load static %}
 {% block content %}
 <body>
 <div class="container-fluid">
@@ -47,15 +48,12 @@
 </div>
 {% include "component/script.html"%}
 </body>
-<style>
-    
-</style>
-<script>
-    $(document).ready(function(){
-        $('.collapsible').collapsible();
-        $('.datepicker').datepicker();
-    });
-</script>
+    <script>
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+            $('.datepicker').datepicker();
+        });
+    </script>
     {% block javascript %}
     {% endblock %}
 {% endblock %}

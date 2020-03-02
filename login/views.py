@@ -7,7 +7,7 @@ class LoginPage(ListView):
     @csrf_exempt
     def get(self, request):
 
-        return render(request, 'province.html')
+        return render(request, 'region.html')
     def post(self, request):
         print('bank')
 

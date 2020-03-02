@@ -1,4 +1,5 @@
-{% extends "../province.html" %}
+{% extends "../region.html" %}
+{% load static %}
 {% block subcontent %}
 <ul class="collapsible">
     <li>
@@ -7,7 +8,7 @@
                 <div class="col col-12 col-sm-12 col-md-3 col-lg-3">
                     <i class="material-icons">filter_drama</i>ภาคเหนือ 
                 </div>
-                <div class="col col-12 col-sm-12 col-md-9 col-lg-9" >
+                <div class="col col-12 col-sm-12 col-md-9 col-lg-9 text-right" >
                     <button class="btn waves-effect waves-light btn-small modal-trigger btn-graph text-center"  data-target="modal1" type="submit" name="action">
                         Graph
                    </button>
@@ -97,77 +98,5 @@
     {% include "component/graph.html"%}
 {% endblock %}
 {% block javascript %}
-<style>
-    
-   
-</style>
-    <script>
-        var ctx = document.getElementById('myChart')
-        Highcharts.chart(ctx, {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Header chart'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        accessibility: {
-            point: {
-                valueSuffix: '%'
-            }
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
-            }
-        },
-        exporting: {
-    enabled: false
-  },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
-            }, {
-                name: 'Internet Explorer',
-                y: 11.84
-            }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Other',
-                y: 7.05
-            }]
-        }]
-});
-        $('.chips').chips()
-        $(document).ready(function(){
-            $('.modal').modal();
-            // $('select').formSelect();
-            $('.collapsible').collapsible();
-            $('.regionpage-province').click(function(){
-                window.location.href = "/province"
-            })
-        });
-    </script>
+<script src="{% static 'js/region.js' %}"></script>
 {% endblock %}

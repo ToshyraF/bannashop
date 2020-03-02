@@ -1,0 +1,17 @@
+
+        
+    .chip{
+        cursor: pointer;
+    }
+    .warning{
+        display: block;
+        overflow:hidden;
+    }
+    .chip:hover{
+        background-color: rgb(196, 225, 252);
+    
+    }
+   
+    .select2-container .select2-selection--single {
+        height: 34px;
+    }
