@@ -1,3 +1,9 @@
+.modal.fade.noshadow {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: unset;
+}
 @media screen and (min-width: 1000px){
     .sub-menu-btn{
         display: none;
@@ -35,4 +41,5 @@
         margin-top:5px;
         margin-left:10px;
     }
+  
 }

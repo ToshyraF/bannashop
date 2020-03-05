@@ -1,0 +1,91 @@
+<div class="modal fade noshadow" id="mainmodal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Manage Order</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                    <input disabled value="I am not editable" id="number" type="text" class="validate">
+                    <label for="number">Shop</label>
+                </div>
+                <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                    <input disabled value="I am not editable" id="cost" type="text" class="validate">
+                    <label for="cost">Date</label>
+                </div>
+            </div>
+            <ul class="collapsible expandable">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                                <input disabled value="I am not editable" id="number" type="text" class="validate">
+                                <label for="number">Number</label>
+                            </div>
+                            <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                                <input disabled value="I am not editable" id="cost" type="text" class="validate">
+                                <label for="cost">Cost by unit</label>
+                            </div>
+                            <div class="input-field col col-12 col-sm-12 col-md-12 col-lg-12">
+                                <input disabled value="I am not editable" id="total" type="text" class="validate">
+                                <label for="total">Total</label>
+                            </div>
+                            <div class="input-field col col-12 col-sm-12 col-md-12 col-lg-12">
+                                <input disabled value="I am not editable" id="description" type="text" class="validate">
+                                <label for="description">description</label>
+                            </div>
+                        </div> 
+                    </div>
+                </li>
+            </ul>
+            <button type="button"  class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal"><i class="material-icons">add</i></button>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" >Send message</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade noshadow" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mySmallModalLabel">Add Item</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                    <input placeholder="I am not editable" id="add-number" type="text" class="validate">
+                    <label for="add-number">Number</label>
+                </div>
+                <div class="input-field col col-12 col-sm-12 col-md-6 col-lg-6">
+                    <input placeholder="I am not editable" id="add-cost" type="text" class="validate">
+                    <label for="add-cost">Cost by unit</label>
+                </div>
+                <div class="input-field col col-12 col-sm-12 col-md-12 col-lg-12">
+                    <input placeholder="I am not editable" id="add-total" type="text" class="validate">
+                    <label for="add-total">Total</label>
+                </div>
+                <div class="input-field col col-12 col-sm-12 col-md-12 col-lg-12">
+                    <input placeholder="I am not editable" id="add-description" type="text" class="validate">
+                    <label for="add-description">description</label>
+                </div>
+            </div> 
+            <div class="row" style="float: right;">
+                <button type="button " class="btn btn-secondary btn-lg">ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  

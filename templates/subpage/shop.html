@@ -50,9 +50,10 @@
         </div> 
         <div class="row mb-2">
             <div class="col col-12 text-right">
-                <button class="btn waves-effect waves-light btn-small modal-trigger" data-target="modal1" type="submit" name="action">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mainmodal">เพิ่มคำสั่งซื้อ</button>
+                <!-- <button class="btn waves-effect waves-light btn-small" data-target="modal" data-target=".bd-example-modal-lg" type="submit" name="action">
                    เพิ่มคำสั่งซื้อ
-                </button>
+                </button> -->
             </div>
         </div>
         <div class="row mb-2">
@@ -90,7 +91,7 @@
 </div>
 {% endblock %}
 {% block modal %}
-    {% include "component/listorder_shop.html"%}
+    {% include "component/addorder_shop.html"%}
 {% endblock %}
 {% block javascript %}
     <script src="{% static 'js/shop.js' %}"></script>
