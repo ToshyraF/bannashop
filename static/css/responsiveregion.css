@@ -53,9 +53,17 @@
     .responsive-container{
         padding: 10px;
     }
+    .regionpage-btn-graph{
+        float: right;
+        margin: auto;
+    }
 }
 @media screen and (min-width: 1000px){
     /* .remove-right-nav{
         padding: auto;
     } */
+    .regionpage-btn-graph{
+        float: right;
+        margin: auto;
+    }
 }
