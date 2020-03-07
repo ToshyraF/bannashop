@@ -47,11 +47,16 @@
     padding: 5px;
 }
 .regionpage-card-item{
+    margin-top: 5px;
     padding: 10px;
 }
 .regionpage-remove-space-item{
     margin-right:0px !important;
     margin-left: 15px;
+}
+.regionpage-btn-graph{
+    float: right;
+    margin: auto;
 }
 @media screen and (max-width: 400px){
     /* .remove-right-nav{
@@ -60,17 +65,10 @@
     .responsive-container{
         padding: 10px;
     }
-    .regionpage-btn-graph{
-        float: right;
-        margin: auto;
-    }
+    
 }
 @media screen and (min-width: 1000px){
     /* .remove-right-nav{
         padding: auto;
     } */
-    .regionpage-btn-graph{
-        float: right;
-        margin: auto;
-    }
 }
