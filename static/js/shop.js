@@ -12,7 +12,9 @@ $(function(){
     $('#myModal').on('hidden.bs.modal', function () {
         $('#mainmodal').css("filter","blur(0px)");
     })
-
+    $('#showorder').on('shown.bs.modal', function () {
+        // $('#mainmodal').css("filter","blur(5px)");
+    })
         $('.collapsible').collapsible();
         $(".js-example-tags").select2();
 })

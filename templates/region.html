@@ -1,72 +1,99 @@
 {% extends "./main.html" %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/responsiveregion.css'%}">
-<body>
-<div class="container-fluid">
-    {% include "component/navbar.html"%}
 
-    <div class="row" style="display: block; margin-top: 20px">
-        <div class="col col-12 ">
+<body>
+    <link rel="stylesheet" href="{% static 'css/responsiveregion.css'%}">
+<div class="container-fluid ">
+    <div class="row">
+        {% include "component/navbar.html"%}
+    </div>
+    
+
+    <!-- <div class="row" > -->
+        <!-- <div class="col col-12 "> -->
             <!-- <div class="card card-nav-tabs"> -->
                 <!-- <div class="card-header card-header-primary" style="background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);"> -->
                     
                 <!-- </div> -->
                 <!-- <div class="card-body "> -->
                     
-                    <div class="row">
-                        <div class="col-12 text-left">
-                            <h2 class="text-gradient-blue" style="font-size:26px"><b>Name Company</b></h2>
-                              <!-- <hr class="hr-sec"> -->
-                              <div class="break-line"></div>
-                          </div>
-                        <div class="col col-12 col-sm-12 col-md-4 col-lg-4">
-                            <ul class="collapsible">
-                                <li class="active">
-                                  <div class="collapsible-header"><i class="material-icons">filter_drama</i>แจ้งเตือน</div>
-                                  <div class="collapsible-body warning-body" >
-                                    <div class="chip warning" >
-                                        <div class="row">
-                                            <div class="col col-9">
-                                                แอร์การช่าง 100000 บาท 10/11/23
-                                            </div>
-                                            <div class="col col-3">
-                                                <i class="close material-icons">close</i>
-                                            </div>
-                                        </div>
-                                      </div>
-                                      <div class="chip warning">
-                                        <div class="row">
-                                            <div class="col col-9">
-                                                แอร์การช่าง 100000 บาท 10/11/23
-                                            </div>
-                                            <div class="col col-3">
-                                                <i class="close material-icons">close</i>
-                                            </div>
-                                        </div>
-                                      </div>
-                                  </div>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="row" style="margin-top: 30px;">
                         
-                        <div class="col col-12 col-sm-12 col-md-8 col-lg-8">
-                            {% include "component/subnavbar.html"%}
-                            {% block subcontent %}
-                            {% endblock %}
-                        </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 ">
+                                <h2 class="text-gradient-blue" style="font-size:26px;font-weight: 600;"><b>Name Company</b></h2>
+                                <div class="break-line"></div>
+                            </div>
                     </div>
+                    
+                    <div class="row">
+                            <div class="col col-12 col-sm-12 col-md-4 col-lg-4" >
+                                <div class="card " data-toggle="collapse" href="#multiCollapseExample1" aria-controls="multiCollapseExample1" style="margin-top: 10px;">
+                                    <div class="card-body " >
+                                      This is some text within a panel body.
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                          <div class="collapse multi-collapse container" style="margin-top: 10px;margin-bottom: 10px;" id="multiCollapseExample1">
+                                            <div class="card card-body">
+                                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
+                                              anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-8 col-lg-8 ">
+                                {% include "component/subnavbar.html"%}
+                                {% block subcontent %}
+                                {% endblock %}
+                            </div>
+                                <!-- <ul class="collapsible">
+                                    <li class="active">
+                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>แจ้งเตือน</div>
+                                    <div class="collapsible-body warning-body" >
+                                        <div class="chip warning" >
+                                            <div class="row">
+                                                <div class="col col-9">
+                                                    แอร์การช่าง 100000 บาท 10/11/23
+                                                </div>
+                                                <div class="col col-3">
+                                                    <i class="close material-icons">close</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chip warning">
+                                            <div class="row">
+                                                <div class="col col-9">
+                                                    แอร์การช่าง 100000 บาท 10/11/23
+                                                </div>
+                                                <div class="col col-3">
+                                                    <i class="close material-icons">close</i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </li>
+                                </ul> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="col col-12 col-sm-12 col-md-8 col-lg-8"> -->
+                          {#  {% include "component/subnavbar.html"%} #}
+                          {# {% block subcontent %} #}
+                          {# {% endblock %} #}
+                        <!-- </div>
+                    </div> -->
                 </div>
-            <!-- </div> -->
-        <!-- </div> -->
-        <!-- <div class="col s6">6-columns (one-half)</div>
-        <div class="col s6">6-columns (one-half)</div> -->
-      </div>
+      <!-- </div> -->
 </div>
 {% block modal %}
 {% endblock %}
 {% include "component/script.html"%}
 </body>
     {% block javascript %}
+    <script>
+
+    </script>
     {% endblock %}
 {% endblock %}
