@@ -1,5 +1,5 @@
 $(function(){
-    var ctx = document.getElementById('myChart')
+    var ctx = document.getElementById('regionpage-graph')
         Highcharts.chart(ctx, {
         chart: {
             plotBackgroundColor: null,
@@ -58,11 +58,11 @@ $(function(){
         }]
 });
 
-    $('.chips').chips()
+    // $('.chips').chips()
     $(document).ready(function(){
-        $('.modal').modal();
-        // $('select').formSelect();
-        $('.collapsible').collapsible();
+        $("#regionpage-show-graph").on('shown.bs.modal', function(){
+            // alert("Hello World!");
+         });
         $('.regionpage-province').click(function(){
             window.location.href = "/province"
         })
