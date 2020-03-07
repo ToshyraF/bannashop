@@ -50,6 +50,9 @@
     /* .remove-right-nav{
         padding: 0px;
     } */
+    .responsive-container{
+        padding: 10px;
+    }
 }
 @media screen and (min-width: 1000px){
     /* .remove-right-nav{
