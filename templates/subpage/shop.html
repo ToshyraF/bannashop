@@ -1,9 +1,8 @@
 {% extends "../region.html" %}
 {% load static %}
 {% block subcontent %}
-<div class="card">
+<!-- <div class="card">
     <div class="card-content">
-      <!-- <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p> -->
         <div class="row mb-2">
             <div class="col col-12">
                 <h6>ร้านค้า</h6>
@@ -51,9 +50,6 @@
         <div class="row mb-2">
             <div class="col col-12 text-right">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mainmodal">เพิ่มคำสั่งซื้อ</button>
-                <!-- <button class="btn waves-effect waves-light btn-small" data-target="modal" data-target=".bd-example-modal-lg" type="submit" name="action">
-                   เพิ่มคำสั่งซื้อ
-                </button> -->
             </div>
         </div>
         <div class="row mb-2">
@@ -90,7 +86,124 @@
         </div>   
 
     </div>
-</div>
+</div> -->
+<div class="card card-body">
+    <h4 class="card-title">Shop</h4>
+    <hr>
+    <label for="exampleForm2">Default input</label>
+    <select class="form-control js-example-tags" id="exampleForm2" style="width: 100%;">
+        <option selected="selected">แอร์การช่าง</option>
+        <option>BB</option>
+        <option>CC</option>
+    </select>
+        <form style="margin-top: 20px;">
+            <div class="row">
+                <div class="col">
+                    <div class="md-form mt-0">
+                        <input type="text" id="shoppage-name" value="สมคิดคาแคร์" class="form-control" disabled>
+                        <label for="shoppage-name" class="disabled">ชื่อร้าน :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form mt-0">
+                        <input type="text" id="shoppage-travel" value="ชลบุรีทราเวล" class="form-control" disabled>
+                        <label for="shoppage-travel" class="disabled">ขนส่ง :</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <div class="md-form mt-0">
+                        <input type="text" id="shoppage-level" value="D" class="form-control" disabled>
+                        <label for="shoppage-level" class="disabled">ระดับ :</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form mt-0">
+                        <input type="text" id="shoppage-phone" value="0871232132" class="form-control" disabled>
+                        <label for="shoppage-phone" class="disabled">เบอร์มือถือ :</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group green-border-focus">
+                        <label for="shoppage-location">ที่อยู่ ​:</label>
+                        <textarea class="form-control" id="shoppage-location"  value="" rows="3">บ้านป่าสัก หนองกำห่าน</textarea>
+                    </div>
+                </div>
+            </div>
+
+          </form>
+        <!-- <input value="John Doe" type="text" id="inputPrefilledEx" class="form-control">
+        <label for="inputPrefilledEx">Example label</label>
+        <input value="John Doe" type="text" id="inputPrefilledEx" class="form-control">
+        <label for="inputPrefilledEx">Example label</label>
+        <input value="John Doe" type="text" id="inputPrefilledEx" class="form-control">
+        <label for="inputPrefilledEx">Example label</label>
+        </div> -->
+        
+    <!-- </div> -->
+    
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+            <th scope="col">Heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 {% endblock %}
 {% block modal %}
     

@@ -1,18 +1,16 @@
 {% extends "./main.html" %}
+{% load static %}
 {% block content %}
 <body>
+    <link rel="stylesheet" href="{% static 'css/setting.css'%}">
 <div class="container-fluid">
     {% include "component/navbar.html"%}
 
-    <div class="row" style="display: block; margin-top: 20px">
+    <!-- <div class="row" style="display: block; margin-top: 20px">
         <div class="col s12">
             <div class="card card-nav-tabs">
-                <!-- <div class="card-header card-header-primary">
-                   <h4>Setting</h4>
-                </div> -->
                 <div class="col-12 text-left">
                     <h2 class="text-gradient-blue" style="font-size:26px"><b>Setting</b></h2>
-                      <!-- <hr class="hr-sec"> -->
                       <div class="break-line"></div>
                   </div>
                 <div class="card-body ">
@@ -92,17 +90,121 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    <div class="card card-body">
+        <div class="card-title">
+            <h2 class="text-gradient-blue" style="font-size:26px;font-weight: 600;"><b>Setting</b></h2>
+            <div class="break-line"></div>
+        </div>
+        
+        <div class="row settingpage-space">
+            <div class="col">
+                <label for="settingpage-region-select">ภูมิภาค</label>
+                <select class="form-control" id="settingpage-region-select" style="width: 100%;">
+                    <option selected="selected">ภาคเหนือ</option>
+                    <option>ภาคกลาง</option>
+                    <option>ภาคตะวันออก</option>
+                    <option>ภาคตะวันตก</option>
+                    <option>ภาคใต้</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row settingpage-space">
+            <div class="col">
+
+                <button class="btn peach-gradient btn-sm float-right" data-toggle="modal" data-target="#settingpage-add-province" style="margin: auto; margin-bottom: 10px;"><i class="fas fa-plus"></i> จังหวัด</button>
+                <label for="settingpage-province-select">จังหวัด</label>
+                <select class="form-control" id="settingpage-province-select" style="width: 100%;margin-top: 10px;">
+                    <option selected="selected">ชลบุรี</option>
+                    <option>ระยอง</option>
+                    <option>จันทบุรี</option>
+                    <option>ตาก</option>
+                    <option>กรุงเทพ</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row settingpage-space">
+            <div class="col">
+
+                <button class="btn peach-gradient btn-sm float-right" data-toggle="modal" data-target="#settingpage-add-province" style="margin: auto; margin-bottom: 10px;"><i class="fas fa-plus"></i> ร้านค้า</button>
+                <label for="settingpage-shop-select">ร้านค้า</label>
+                <select class="form-control" id="settingpage-shop-select" style="width: 100%;margin-top: 10px;">
+                    <option selected="selected">บาย</option>
+                    <option>ทราย</option>
+                    <option>บ้าน</option>
+                    <option>นา</option>
+                    <option>จัน</option>
+                </select>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                </tr>
+              </tbody>
+            </table>
+    </div>  
 </div>
-{% include "component/addprovince_modal.html"%}
-{% include "component/addshop_modal.html"%}
+{# {% include "component/addprovince_modal.html"%} #}
+{# {% include "component/addshop_modal.html"%} #}
 {% include "component/script.html"%}
 </body>
 {% block javascript %}
     <script>
-        $('.modal').modal();
-        $(".js-example-tags").select2();
-        $(".select-setting-region").formSelect();
+        $("#settingpage-province-select").select2();
+        $("#settingpage-region-select").select2();
+        $("#settingpage-shop-select").select2();
     </script>
 {% endblock %}
 
