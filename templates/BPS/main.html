@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../mdboost/css/mdb.min.css"> -->
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <!-- <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css"> -->
+    
+</head>
+<body class="block">
+    <div class="navbars" style="color: white; font-weight: 600; font-family: 'Kanit', sans-serif;;">
+        <ul>
+            <li><img src="{% static 'img/logo BPS-01.svg' %}" alt="" style="width: 100px;"></li>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Service</li>
+            <li>Service</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <ul>
+            <li class="item1" >
+                
+                <a href="google.co.th" style="height: 207px;">
+                    
+                    <img class="bg" src="{% static 'img/pic-service.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-02.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">SERVICE</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                </a>
+                
+            </li>
+            <li class="item2">
+                <a href="google.co.th" >
+                    <img class="bg" src="{% static 'img/pic-about-us.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-03.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">ABOUT US</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                    
+                </a>
+            </li>
+            <li class="item3">
+                <a href="google.co.th">
+                    <img class="bg" src="{% static 'img/pic-what-new.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-04.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">WHAT'S NEWS</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                </a>
+            </li>
+            <li class="item4">
+                <a href="google.co.th">
+                    <img class="bg" src="{% static 'img/pic-map.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-05.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">MAP</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                
+                </a>
+            </li>
+            <li class="item5">
+                <a href="google.co.th">
+                    <img class="bg" src="{% static 'img/pic-tracking.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-06.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">TRACKING</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                    
+                </a>
+            </li>
+            <li class="item6">
+                <a href="google.co.th">
+                    <img class="bg" src="{% static 'img/pic-customer.png' %}" alt="">
+                    <div class="bg forground"></div>
+                    <div class="text">
+                        <p class="icon">
+                            <img src="{% static 'img/icon/icon-07.svg' %}" alt="" srcset="">
+                        </p>
+                        <h2 class="title">OUR CUSTOMERS</h2>
+                        <p class="description">Make your holiday to Japan<br>even more enjoyable with<br>"Hands-Free Travel"!</p>
+                    </div>
+                </a>
+            </li>
+            <!-- <li><img src="../assets/img/pic-service.png' %}" alt=""></li> -->
+        </ul>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header primary-color font-weight-light">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: white;">Setting</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+
+                    <input id="class_item" type="text" hidden>
+
+                    <label >Back ground</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="background">
+                        <label class="custom-file-label" for="background">Choose file</label>
+                    </div>
+
+                    <label >Icon</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="icon">
+                        <label class="custom-file-label" for="icon">Choose file</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="save" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<!-- <script src="../assets/js/jquery-2.0.3.min.js"></script> -->
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script>
+    $(function(){
+        $('.forground').hide()
+        resize()
+        $( window ).resize(function() {
+            resize()
+        });
+        $('a').hover(function(){
+            $(this).children('.forground').show()
+        },function(){
+            $(this).children('.forground').hide()
+        })
+
+        $('.main ul li a').on({
+            "contextmenu": function(e) {
+                let cardElement = $(e.target).closest('li')
+                console.log($(e.target).closest('li').attr('class'));
+                console.log($(e.target).closest('li').find('img.bg').attr('src'));
+                console.log($(e.target).closest('li').find('.icon img').attr('src'));
+                console.log($(e.target).closest('li').find('.title').text());
+                console.log($(e.target).closest('li').find('.description').text());
+                console.log("ctx menu button:", e.which); 
+
+                $('#class_item').val(cardElement.attr('class'))
+                $('#title').val(cardElement.find('.title').text())
+                $('#description').val(cardElement.find('.description').text())
+                $('#editModal').modal('show')
+                // $('#myModal').show()
+                // Stop the context menu
+                e.preventDefault();
+            }
+        })
+
+        $('#save').click(function(){
+            let cardElement = $('.'+$('#class_item').val())
+            let icons = $('#icon')
+            let backgrounds = $('#background')
+            console.log("OUTPUT: icons", icons[0].files)
+            console.log("OUTPUT: icons", icons.val())
+
+            if(icons.val() != ''){
+                let base64 = encodeImageFileAsURL(function(base64Img){
+                cardElement.find('.icon img').attr('src', base64Img);
+
+                }, icons[0])
+            }
+           
+            if(backgrounds.val() != ''){
+                let base64 = encodeImageFileAsURL(function(base64Img){
+                cardElement.find('img.bg').attr('src', base64Img);
+
+                }, backgrounds[0])
+            }
+            // $('.icon img').attr('src', base64);
+            cardElement.find('.title').text($('#title').val())
+            cardElement.find('.description').text($('#description').val())
+            $('#editModal').modal('hide')
+            resize()
+        })
+    })
+
+    function display(cardElement){
+        cardElement.find('.icon img').attr('src', base64Img);
+    }
+
+    function encodeImageFileAsURL(cb, f) {
+        // console.log("OUTPUT: encodeImageFileAsURL -> cb", cb)
+        var file = f.files[0];
+        // console.log("OUTPUT: encodeImageFileAsURL -> file", file)
+        var reader  = new FileReader();
+        reader.onloadend = function () {
+            cb(reader.result);
+        }
+        reader.readAsDataURL(file);
+    }
+
+    function resize(){
+        let fullpageWidth = $('html').width()
+        let fullpageHeight = $('html').height()
+
+        if(fullpageWidth > 760){
+            let navbar = $('.navbars').height()
+        
+            let main = fullpageHeight - navbar
+            let image = main/2
+            
+            
+
+            let offset_width = parseInt($('.main ul').css('border-left').split('px')[0])
+            let offset_height = parseInt($('.main ul li:nth-child(n+4)').css('border-bottom').split('px')[0])
+            let li_height = image - offset_height*2
+            let li_width = $('.main ul li').width() - offset_width
+            // $('.main ul li').css('height',li_height)
+            // $('.main ul li').css('width',li_width)
+            $('.main ul li .bg').css('height',li_height)
+            $('.main ul li .bg').css('width',li_width)
+            // console.log("OUTPUT: $('.column-01').height()", $('.main ul li').height())
+        }
+        else{
+            $('.main ul li .bg').css('height',"200px")
+            $('.main ul li .bg').css('width',"100%")
+        }
+    }
+</script>
+</html>
