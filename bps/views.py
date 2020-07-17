@@ -10,3 +10,11 @@ class Main(ListView):
         return render(request, 'BPS/main.html')
     def post(self, request):
         print('bank')
+
+
+class Service(ListView):
+    @csrf_exempt
+    def get(self, request):
+        return render(request, 'BPS/service.html')
+    def post(self, request):
+        print('bank')

@@ -8,6 +8,8 @@ from bps.views import *
 
 urlpatterns = [
     # VFinding VADDfinding VEditFinding
+   
+    url(r'^service', Service.as_view(), name='index'),
     url(r'^', Main.as_view(), name='index'),
     
 ]

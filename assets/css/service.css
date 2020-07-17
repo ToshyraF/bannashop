@@ -32,17 +32,17 @@ html{
     list-style-type: none;
     /* border: 10px solid transparent; */
     border-left: 10px solid transparent;
-    border-top: 20px solid transparent ;
+    border-top: 100px solid transparent ;
 }
 .main ul li{
     float: left;
-    width: 33.3333%;
+    width: 25%;
 }
 
-.main ul li:nth-child(n+4){
+/* .main ul li:nth-child(n+4){
     border-bottom: 10px solid transparent;
     border-top: 10px solid transparent;
-}
+} */
 
 .main ul li .text{
     position: absolute;   
@@ -64,7 +64,7 @@ a .text{
     font-weight: bold;
     position: absolute;
     z-index: 1;
-    top: 200px;
+    top: 250px;
     left: 0;
     box-sizing: border-box;
     width: 100%;
