@@ -19,7 +19,27 @@
     <link rel="stylesheet" href="{% static 'css/main.css'%}">
     <!-- <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/main.css"> -->
-    
+    <style>
+        .cookiealert.show {
+            opacity: 1;
+            transform: translateY(0%);
+            transition-delay: 1000ms;
+        }
+        .cookiealert {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0 !important;
+            z-index: 999;
+            opacity: 0;
+            border-radius: 0;
+            background: #212327 url(cubes.png);
+            transform: translateY(100%);
+            transition: all 500ms ease-out;
+            color: #ecf0f1;
+        }
+    </style>
 </head>
 <body class="block">
     <div class="navbars" style="color: white; font-weight: 600; font-family: 'Kanit', sans-serif;;">
@@ -121,6 +141,16 @@
         </ul>
     </div>
 
+    <div class="alert alert-dismissible text-center cookiealert show" role="alert">
+        <div class="cookiealert-container">
+            <b>Do you like cookies?</b> 🍪 We use cookies to ensure you get the best experience on our website. <a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
+    
+            <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">
+                I agree
+            </button>
+        </div>
+    </div>
+
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -177,6 +207,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+<script type="text/javascript" src="{% static 'js/cookiealert.js' %}"></script>
+
 <script>
     $(function(){
         $('.forground').hide()
